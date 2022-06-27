@@ -6,8 +6,25 @@
 
 # Project Structure
 
-// TODO
-
+```
+.
+├── LICENSE
+├── README.md
+├── infra
+│   ├── main.tf
+│   ├── resources.tf
+│   └── variables.tf
+└── src
+    └── example-ts-function
+        ├── host.json
+        ├── local.settings.json
+        ├── package.json
+        ├── say-goodbye
+        │   └── function.json
+        ├── say-hello
+        │   └── function.json
+        └── tsconfig.json
+```
 # Azure CLI Login
 
 # Azure Infrastructure with Terraform
