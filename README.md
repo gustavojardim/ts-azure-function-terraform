@@ -18,7 +18,7 @@
         ├── host.json
         ├── local.settings.json 
         ├── package.json
-        ├── say-goodbye <- Configuring a trigger and it's input/output bindings for a particular purpose and usage of the function 
+        ├── say-goodbye <- Setting a trigger and input/output bindings for a specific usage of the function 
         │   └── function.json
         ├── say-hello <- Another trigger and bindings
         │   └── function.json
