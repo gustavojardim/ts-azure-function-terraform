@@ -26,10 +26,21 @@
 ```
 # Azure CLI Login
 
+Login to Azure with Azure CLI command `az login`
+
 # Azure Infrastructure with Terraform
 
-// TODO
+Once you finish with your Terraform changes, you can run the following steps to apply the infra
 
-# Azure Function
+1. Run `terraform validate && terraform fmt` to validate your infra configuration and format the files
+2. `terraform init` to prepare the working directory so Terraform can run the configuration
+3. `terraform plan` to preview any changes before you apply them
+4. `terraform apply` to create or update infrastructure
 
-// TODO
+# Setup new Azure Function from Scratch
+
+1. Inside the **src** folder, execute the command `func init <MyFunctionName>`
+2. Select the worker runtime, in this case **Node**
+3. Select the language, so **Typescript**
+4. Once the function directory is created, navigate to it with `cd <DirName>` and create a new directory with a standard name, like `mkdir http-trigger`
+5. Navigate to your new dir and create a function definition file with `touch function.json`
