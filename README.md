@@ -5,23 +5,22 @@
 3. Install [tfswitch](https://github.com/warrensbox/terraform-switcher) to be able to install and use any Terraform version at anytime
 
 # Project Structure
-
 ```
 .
 ├── LICENSE
 ├── README.md
-├── infra
+├── infra <- Code that will setup the infrastructure on Azure
 │   ├── main.tf
 │   ├── resources.tf
 │   └── variables.tf
 └── src
-    └── example-ts-function
+    └── example-ts-function <- Code of a Typescript Azure Function
         ├── host.json
-        ├── local.settings.json
+        ├── local.settings.json 
         ├── package.json
-        ├── say-goodbye
+        ├── say-goodbye <- Configuring a trigger and it's input/output bindings for a particular purpose and usage of the function 
         │   └── function.json
-        ├── say-hello
+        ├── say-hello <- Another trigger and bindings
         │   └── function.json
         └── tsconfig.json
 ```
