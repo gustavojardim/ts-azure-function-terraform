@@ -24,20 +24,27 @@
         │   └── function.json
         └── tsconfig.json
 ```
-# Azure CLI Login
+
+# Steps to Run this Function as Is
+
+### Login to Azure with CLI Login
 
 Login to Azure with Azure CLI command `az login`
 
-# Azure Infrastructure with Terraform
-
-Once you finish with your Terraform changes, you can run the following steps to apply the infra
+### Setup Azure Infrastructure with Terraform
 
 1. Run `terraform validate && terraform fmt` to validate your infra configuration and format the files
 2. `terraform init` to prepare the working directory so Terraform can run the configuration
 3. `terraform plan` to preview any changes before you apply them
 4. `terraform apply` to create or update infrastructure
 
-# Setup new Azure Function from Scratch
+### Package (zip) the Function and Send it to Azure
+
+1. TODO
+2. TODO
+3. TODO
+
+# To Setup new Azure Function from Scratch
 
 1. Inside the **src** folder, execute the command `func init <MyFunctionName>`
 2. Select the worker runtime, in this case **Node**
