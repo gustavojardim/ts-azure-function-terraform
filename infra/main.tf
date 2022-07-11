@@ -8,11 +8,12 @@ terraform {
     }
   }
 
+  # Go ahead and create the resource group, storage account, container and get the key from the Azure Portal and put it on the key field below
   backend "azurerm" {
-    resource_group_name  = ""
-    storage_account_name = ""
-    container_name       = ""
-    key                  = ""
+    resource_group_name  = "playground"
+    storage_account_name = "playground-storage-account"
+    container_name       = "tfstate"
+    key                  = "CHANGE_ME"
   }
 }
 

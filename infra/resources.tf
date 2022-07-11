@@ -1,30 +1,30 @@
-resource "azurerm_app_service_plan" "ingestion-asp" {
-  name                = ""
-  location            = ""
-  resource_group_name = ""
-  tags                = ""
+resource "azurerm_app_service_plan" "salutation-asp" {
+  name                = "playground-salutation-asp"
+  location            = local.location
+  resource_group_name = local.resource_group
+  tags                = local.common_tags
   sku {
     tier = "Standard"
     size = "S1"
   }
 }
 
-resource "azurerm_storage_account" "ingestion-sa" {
-  name                     = ""
-  location                 = ""
-  account_tier             = ""
-  resource_group_name      = ""
-  account_replication_type = ""
-  tags                     = ""
+resource "azurerm_storage_account" "salutation-sa" {
+  name                     = "playground-salutation-sa"
+  location                 = local.location
+  account_tier             = "Standard"
+  resource_group_name      = local.resource_group
+  account_replication_type = "LRS"
+  tags                     = local.common_tags
 }
 
-resource "azurerm_function_app" "ingestion-fn" {
-  name                       = ""
-  location                   = ""
-  resource_group_name        = ""
-  app_service_plan_id        = ""
-  storage_account_name       = ""
-  storage_account_access_key = ""
+resource "azurerm_function_app" "salutation-fn" {
+  name                       = "playground-salutation-fn"
+  location                   = local.location
+  resource_group_name        = local.resource_group
+  app_service_plan_id        = azurerm_app_service_plan.salutation-asp.id
+  storage_account_name       = azurerm_storage_account.salutation-sa.name
+  storage_account_access_key = azurerm_storage_account.salutation-sa.primary_access_key
 
   tags = local.common_tags
 
