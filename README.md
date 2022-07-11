@@ -43,7 +43,7 @@ Login to Azure with Azure CLI command `az login`
 Inside your function root folder, run:
 
 1. `npm run build && zip -r <name-of-your-choice>.zip .`
-2. `az functionapp deployment source config-zip -g <resource-group-name -n <function-app-name> --src ./<package-name>.zip --debug`
+2. `az functionapp deployment source config-zip -g <resource-group-name> -n <function-app-name> --src ./<package-name>.zip --debug`
 
 You can lately save these commands as NPM commands.
 
