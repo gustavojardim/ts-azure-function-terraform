@@ -1,17 +1,22 @@
 {
-  "name": "",
+  "name": "Salutation App",
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
+    "build": "rimraf ./dist && tsc",
+    "watch": "rimraf ./dist && tsc -w",
     "prestart": "npm run build",
     "start": "func start",
-    "test": "echo \"No tests yet...\""
+    "test": "echo \"No tests yet...\"",
+    "package": "npm run build && zip -r <zip-name>.zip .",
+    "upload": "az functionapp deployment source config-zip -g <resource-group> -n <function-name> --src ./<zip-name>.zip --debug",
+    "deploy": "npm run package && npm run upload",
+    "lint": "eslint . --ext .ts"
   },
   "dependencies": {},
   "devDependencies": {
     "@azure/functions": "^3.0.0",
+    "@types/node": "18.0.0",
     "typescript": "^4.0.0"
   }
 }
